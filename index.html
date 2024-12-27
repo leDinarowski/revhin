@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="dist/output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400;500&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <title>Revhin - Revenue Insights</title>
+    <script>
+      function toggleFAQ(button) {
+          const content = button.nextElementSibling;
+          button.setAttribute("aria-expanded", button.getAttribute("aria-expanded") === "false" ? "true" : "false");
+          content.style.maxHeight = button.getAttribute("aria-expanded") === "true" ? content.scrollHeight + "px" : "0";
+      }
+  </script>
+</head>
+<body>
+
+  <!--Contains the top menu and the hero section-->
+    <main class="dark:bg-gray-800 relative overflow-hidden selection:text-revhinBlue">
+
+      <!--Top menu-->
+        <header class="h-24 sm:h-32 flex items-center z-30 w-full">
+            <div class="container mx-auto px-6 py-6 flex items-center justify-between rounded-2xl shadow-md">
+              <!--Logo Section-->
+              <div class="font-kodchasan text-black dark:text-white font-black text-2xl">
+                REVHIN
+              </div>
+
+              <!--Top menu, left side section-->
+              <div class="flex items-center">
+                <div class="relative inline-block text-left z-50">
+                
+                <!--Sign In Button-->
+                
+                <button class="ml-4 px-4 py-2 bg-white text-revhinBlue border border-revhinBlue rounded-md transition-colors hover:bg-revhinBlue hover:text-white">
+                  Sign In
+                </button>
+                
+                <!--Sign Up Button-->
+                <button class="ml-4 px-4 py-2 bg-revhinBlue border border-revhinBlue text-white rounded-md transition-colors">
+                  Sign Up
+                </button>
+
+              </div>
+            </div>
+          </header>
+          
+        <div class="bg-white dark:bg-gray-800 flex relative z-20 items-center overflow-hidden">
+            <div class="container mx-auto px-6 flex relative py-16">
+                <div class="sm:w-2/3 lg:w-2/5 flex flex-col relative z-20 sm:py-20 sm:px-20">
+                    <h1 class="font-poppins text-4xl sm:text-6xl font-black flex flex-col leading-none dark:text-white text-black">
+                        Actionable Revenue Insights
+                    </h1>
+                    <p class="pt-4 sm:text-xl sm:pt-8 font-poppins text-gray-800 dark:text-white">
+                        Stop wrestling with complex dashboards and waiting for analysts. Get automated sales performance insights that help you make better decisions, faster.
+                    </p>
+                </div>
+                <div class="hidden sm:block sm:w-1/3 lg:w-3/5 relative">
+                    <img src="https://www.tailwind-kit.com/images/object/10.png" alt="" class="max-w-xs md:max-w-sm m-auto"/>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--Features-->
+    <div class="w-full pb-20 bg-gray-50">
+      <!--Statement-->
+      <div class="flex items-center justify-center py-20 selection:text-revhinBlue">
+        <h1 class="font-poppins text-revhinDarkBlue text-4xl px-8 sm:px-0 font-bold sm:text-5xl sm:w-3/5">
+          Unlock the full potential of your sales data with smart insights that guide your next move.
+        </h1>
+      </div>
+    
+      <!--Features Grid-->
+      <div class="flex items-center justify-center">
+        <div class="container grid grid-cols-1 sm:grid-cols-4 gap-4">
+          
+          <!--Card 1-->
+          <div class="col-span-1 sm:col-span-2">
+            <div class="flex flex-col p-4 min-h-72 h-full hover:shadow-lg rounded-xl transition duration-500 ease-in-out bg-white shadow-md">
+              <div class="flex items-center gap-2 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-revhinDarkBlue">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+                </svg>
+                <h3 class="font-poppins text-xl text-revhinDarkBlue font-semibold">Deep Insights</h3>
+              </div>
+              <p class="font-poppins text-revhinDarkBlue text-base">
+                Leverage automated analysis to reveal trends and insights hidden in your sales data—turning complexity into clarity.
+              </p>
+            </div>
+          </div>
+    
+          <!--Card 2-->
+          <div class="col-span-1">
+            <div class="flex flex-col p-4 min-h-72 h-full hover:shadow-lg rounded-xl transition duration-500 ease-in-out bg-revhinDarkBlue shadow-md">
+              <div class="flex items-center gap-2 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+                </svg>
+                <h3 class="font-poppins text-xl text-white font-semibold">Actionable Metrics</h3>
+              </div>
+              <p class="font-poppins text-white text-base">
+                Track KPIs like conversions and lead times across specific periods, empowering you with reliable data to refine strategies.
+              </p>
+            </div>
+          </div>
+    
+          <!--Card 3 (Tall Card)-->
+          <div class="col-span-1 row-span-2">
+            <div class="flex flex-col p-4 min-h-72 h-full hover:shadow-lg rounded-xl transition duration-500 ease-in-out bg-white shadow-md">
+              <div class="flex items-center gap-2 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-revhinDarkBlue">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+                </svg>
+                <h3 class="font-poppins text-xl text-revhinDarkBlue font-semibold">Revenue Growth</h3>
+              </div>
+              <p class="font-poppins text-revhinDarkBlue text-base">
+                Track performance with precision, spot growth opportunities, and scale revenue effortlessly using actionable sales metrics.
+              </p>
+            </div>
+          </div>
+    
+          <!--Card 4-->
+          <div class="col-span-1">
+            <div class="flex flex-col p-4 min-h-72 h-full hover:shadow-lg rounded-xl transition duration-500 ease-in-out bg-revhinBlue shadow-md">
+              <div class="flex items-center gap-2 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+                </svg>
+                <h3 class="font-poppins text-xl text-white font-semibold">Smarter Training</h3>
+              </div>
+              <p class="font-poppins text-white text-base">
+                Analyze historical performance trends without upgrading to expensive CRM plans—perfect for focused, high-impact training sessions.
+              </p>
+            </div>
+          </div>
+    
+          <!--Card 5-->
+          <div class="col-span-1 sm:col-span-2">
+            <div class="flex flex-col p-4 min-h-72 h-full hover:shadow-lg rounded-xl transition duration-500 ease-in-out bg-white shadow-md">
+              <div class="flex items-center gap-2 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-revhinDarkBlue">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+                </svg>
+                <h3 class="font-poppins text-xl text-revhinDarkBlue font-semibold">Streamlined Audits</h3>
+              </div>
+              <p class="font-poppins text-revhinDarkBlue text-base">
+                Monitor deal changes with ease using a streamlined interface, making audits faster and less stressful.
+              </p>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+
+    <!--EASY AS COUNT 1,2,3-->
+
+    <div class="w-full py-20 bg-white selection:bg-revhinDarkBlue selection:text-white">
+      <div class="container mx-auto px-12 py-8">
+        <div class="px-6 py-12">
+          <!-- Two Column Layout -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
+            <div class="flex items-center">
+              <div class="space-y-8">
+                <div class="space-y-6">
+                  <h2 class="font-poppins text-4xl pl-12 sm:text-5xl font-bold text-revhinDarkBlue">
+                    Quick Setup, Fast Results
+                  </h2>
+                  <p class="text-xl px-12 text-revhinDarkBlue">
+                    Our platform is designed for busy professionals.<br> Set up in minutes and start getting revenue insights!
+                  </p>
+                  <div class="pt-4 flex justify-start pl-12">
+                    <a href="#" class="inline-flex items-center justify-center px-12 py-3 text-base font-medium rounded-lg text-white bg-revhinBlue hover:bg-revhinDarkBlue transition duration-150">
+                      Get Started →
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Steps -->
+            <div class="space-y-6">
+              <!-- Step 1 -->
+              <div class="flex items-start gap-4 bg-white border border-gray-400 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-200 ease-in-out">
+                <div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="size-10 text-orange-500">
+                      <path d="M266.197,216.109c-22.551,21.293-36.655,51.48-36.655,84.991c0,26.326,8.714,50.582,23.359,70.08 l-44.473,44.74c-3.953-1.438-8.176-2.245-12.579-2.245c-9.702,0-18.776,3.774-25.605,10.602 c-6.828,6.827-10.602,15.989-10.602,25.696c0,9.701,3.773,18.775,10.602,25.605c6.829,6.826,15.993,10.42,25.605,10.42 c9.703,0,18.777-3.505,25.695-10.42c6.829-6.83,10.602-15.994,10.602-25.605c0-3.774-0.538-7.369-1.707-10.873l44.923-45.102 c19.765,15.183,44.381,24.169,71.244,24.169c64.599,0,116.797-52.38,116.797-116.977c0-58.578-42.854-107.093-99.007-115.628 v-55.343c15.723-6.65,25.335-21.384,25.335-38.545c0-23.449-18.777-43.034-42.227-43.034c-23.448,0-41.956,19.585-41.956,43.034 c0,17.161,9.613,31.895,25.335,38.545v54.983c-13.655,1.887-26.593,6.019-38.362,12.219 c-24.796-18.778-105.565-76.997-151.746-112.126c1.078-3.953,1.798-8.085,1.798-12.397c0-25.875-21.113-46.898-47.078-46.898 c-25.875,0-46.898,21.023-46.898,46.898c0,25.965,21.023,46.988,46.898,46.988c8.805,0,16.98-2.606,24.078-6.828L266.197,216.109z M346.606,363.095c-34.229,0-61.991-27.763-61.991-61.994c0-34.229,27.762-61.99,61.991-61.99c34.23,0,61.992,27.761,61.992,61.99 C408.599,335.332,380.837,363.095,346.606,363.095z"/>
+                    </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2">1. Connect to Hubspot</h3>
+                  <p class="text-gray-800">Seamlessly HubSpot integration with just one click</p>
+                </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="flex items-start gap-4 bg-white border border-gray-400 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-200 ease-in-out">
+                <div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
+                  <svg width="64px" height="64px" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M117 608.4v178.5c1.5 93.7 155.7 169.5 395 169.5s393.4-75.8 395-169.5V608.4H117z" fill="#1B9BDB"></path><path d="M907 607.7c0 99.4-154.8 180-395 180s-395-80.6-395-180 154.8-180 395-180 395 80.5 395 180z" fill="#FFFFFF"></path><path d="M117 428.4v158.5c1.5 93.7 155.7 179.5 395 179.5s393.4-85.8 395-179.5V428.4H117z" fill="#1B9BDB"></path><path d="M907 427.7c0 99.4-154.8 180-395 180s-395-80.6-395-180 154.8-180 395-180 395 80.5 395 180z" fill="#FFFFFF"></path><path d="M117 248.4v158.5c1.5 93.7 155.7 179.5 395 179.5s393.4-85.8 395-179.5V248.4H117z" fill="#1B9BDB"></path><path d="M907 247.7c0 99.4-154.8 180-395 180s-395-80.6-395-180 154.8-180 395-180 395 80.5 395 180z" fill="#3ED6FF"></path></g>
+                  </svg>
+              </div>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2">2. Select your data</h3>
+                  <p class="text-gray-800">Customize your data flow to fit your business</p>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="flex items-start gap-4 bg-white border border-gray-400 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-200 ease-in-out">
+                <div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
+                  <svg height="64px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#C7CFE2;" d="M212.17,435.162v33.008c0,24.207,19.623,43.83,43.83,43.83l0,0c24.207,0,43.83-19.623,43.83-43.83 v-33.008H212.17z"></path> <path style="opacity:0.1;enable-background:new ;" d="M245.362,468.17v-33.008H212.17v33.008c0,24.207,19.623,43.83,43.83,43.83 c5.875,0,11.475-1.164,16.596-3.262C256.621,502.196,245.362,486.502,245.362,468.17z"></path> <path style="fill:#FFD782;" d="M257.892,86.994c-75.51-1.022-138.722,61.303-138.722,136.819c0,30.098,9.726,57.921,26.195,80.513 c26.43,44.007,38.985,64.51,42.774,91.373c1.625,11.518,11.466,20.091,23.097,20.091h89.53c11.631,0,21.472-8.573,23.097-20.091 c3.79-26.863,16.345-47.366,42.774-91.373c16.47-22.592,26.195-50.415,26.195-80.513C392.833,148.875,332.59,88.005,257.892,86.994z "></path> <path style="opacity:0.1;enable-background:new ;" d="M232.394,395.699c-3.79-26.863-16.344-47.366-42.774-91.373 c-16.47-22.592-26.195-50.415-26.195-80.513c0-67.413,50.377-124.309,114.905-135.017c-6.663-1.094-13.488-1.707-20.438-1.802 c-75.51-1.022-138.722,61.303-138.722,136.819c0,30.098,9.726,57.921,26.195,80.513c26.431,44.008,38.984,64.51,42.774,91.373 c1.625,11.518,11.465,20.09,23.097,20.09h44.256C243.86,415.79,234.018,407.216,232.394,395.699z"></path> <path style="fill:#B4BBCC;" d="M317.798,435.162l-61.797-19.373l-61.797,19.373c-10.7,0-19.373,8.674-19.373,19.373 c0,10.7,8.674,19.374,19.373,19.374h123.595c10.7,0,19.373-8.674,19.373-19.374C337.171,443.837,328.497,435.162,317.798,435.162z"></path> <path style="opacity:0.1;enable-background:new ;" d="M219.085,454.536c0-10.7,8.674-19.373,19.374-19.373l39.67-12.436 l-22.128-6.937l-61.797,19.373c-10.7,0-19.374,8.674-19.374,19.373c0,10.7,8.674,19.374,19.374,19.374h44.256 C227.759,473.909,219.085,465.236,219.085,454.536z"></path> <path style="fill:#C7CFE2;" d="M317.798,396.416H194.204c-10.7,0-19.373,8.674-19.373,19.373l0,0c0,10.7,8.674,19.373,19.373,19.373 h123.595c10.7,0,19.373-8.674,19.373-19.373l0,0C337.171,405.09,328.497,396.416,317.798,396.416z"></path> <path style="opacity:0.1;enable-background:new ;" d="M219.085,415.79c0-10.7,8.674-19.373,19.374-19.373h-44.256 c-10.7,0-19.374,8.674-19.374,19.373c0,10.7,8.674,19.373,19.374,19.373h44.256C227.759,435.162,219.085,426.489,219.085,415.79z"></path> <g> <path style="fill:#FFD782;" d="M256.001,61.698c-4.584,0-8.298-3.715-8.298-8.298V8.298c0-4.583,3.714-8.298,8.298-8.298 s8.298,3.715,8.298,8.298V53.4C264.299,57.982,260.584,61.698,256.001,61.698z"></path> <path style="fill:#FFD782;" d="M154.169,87.636c-2.941,0-5.789-1.567-7.294-4.33L125.3,43.698 c-2.192-4.024-0.707-9.064,3.317-11.256c4.027-2.193,9.065-0.707,11.256,3.318l21.575,39.608c2.192,4.024,0.707,9.064-3.317,11.256 C156.871,87.311,155.51,87.636,154.169,87.636z"></path> <path style="fill:#FFD782;" d="M77.13,159.126c-1.542,0-3.101-0.429-4.493-1.328l-37.893-24.462 c-3.85-2.486-4.957-7.622-2.471-11.472s7.621-4.957,11.471-2.471l37.893,24.462c3.85,2.486,4.957,7.622,2.471,11.472 C82.522,157.786,79.854,159.126,77.13,159.126z"></path> <path style="fill:#FFD782;" d="M357.832,87.636c-1.341,0-2.701-0.325-3.962-1.012c-4.024-2.192-5.509-7.232-3.317-11.256 l21.575-39.608c2.191-4.025,7.228-5.512,11.256-3.318c4.024,2.192,5.509,7.232,3.317,11.256l-21.575,39.608 C363.621,86.07,360.773,87.636,357.832,87.636z"></path> <path style="fill:#FFD782;" d="M434.871,159.126c-2.724,0-5.391-1.34-6.979-3.798c-2.486-3.85-1.38-8.987,2.471-11.472 l37.893-24.462c3.848-2.485,8.985-1.38,11.471,2.471s1.38,8.987-2.471,11.472l-37.893,24.462 C437.973,158.697,436.413,159.126,434.871,159.126z"></path> </g> </g>
+                  </svg>                 
+              </div>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2">3. Get your insights</h3>
+                  <p class="text-gray-800">Unlock actionable insights to fuel your growth</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Ready to Transofrm Your Sales Analytics?-->
+
+    <div class="w-full py-20 bg-gray-50 selection:bg-revhinDarkBlue selection:text-white">
+        <div class="max-w-5xl mx-auto font-poppins">
+          <!-- Section Header -->
+          <h2 class="font-poppins text-3xl text-center pb-20 sm:text-6xl font-bold text-revhinDarkBlue">
+            Ready to transform your sales analytics?
+          </h2>
+        
+          <!-- Pricing Section -->
+          <div class="grid grid-cols-1 sm:grid-cols-6 gap-8">
+            <!-- Plan 1 -->
+            <div class="col-span-4 sm:col-span-2 flex flex-col p-6 bg-white border border-gray-200 rounded-xl shadow">
+              <h3 class="text-base mb-4">Give it a Try!</h3>
+              <p class="text-2xl mb-4">Free<span class="text-sm"> /mo</span></p>
+              <p class="mb-4 text-sm">Per company</p>
+              <hr class="border-dashed border-gray-400 mb-4">
+              <ul class="space-y-2 mb-6">
+                <li class="flex gap-2 text-sm">
+                  Up to 100 companies
+                </li>
+                <li class="flex gap-2 text-sm">
+                  Limited Insights
+                </li>
+                <li class="flex gap-2 text-sm">
+                  Export to CSV
+                </li>
+              </ul>
+              <button class="mt-auto inline-flex items-center justify-center px-12 py-3 text-base font-medium rounded-lg text-revhinDarkBlue bg-gray-100">
+                Get Started
+              </button>
+            </div>
+        
+            <!-- Plan 2 -->
+
+    <div class="col-span-4 flex flex-col p-6 bg-gray-50 text-black border-2 border-revhinBlue border-dashed shadow-md hover:shadow-xl rounded-md transition duration-200 ease-in-out">
+      <div class="grid grid-cols-5 gap-6">
+        <!-- Column 1 -->
+        <div class="col-span-2 flex flex-col justify-center items-center">
+          <h3 class="text-2xl font-bold mb-4 text-center">Insight Machine</h3>
+          <p class="text-5xl font-bold mb-4 text-center">$8.34 <span class="text-lg">/mo</span></p>
+          <p class="mb-4 text-lg text-center">Per company</p>
+        </div>
+    
+        <!-- Column 2 -->
+        <ul class="space-y-2 col-span-3">
+          <li class="flex items-center gap-2 font-bold">
+            Everything you need to fulfill your insights needs:
+          </li>
+          <li class="flex items-center gap-2 pl-6">
+            Unlimited companies
+          </li>
+          <li class="flex items-center gap-2 pl-6">
+            AI Insights
+          </li>
+          <li class="flex items-center gap-2 pl-6">
+            Hourly insights
+          </li>
+          <li class="flex items-center gap-2 pl-6">
+            XXXXX
+          </li>
+          <li class="flex items-center gap-2 pl-6">
+            YYYYY
+          </li>
+          <li class="flex items-center gap-2 pl-6">
+            ZZZZZ
+          </li>
+        </ul>
+      </div>
+    
+      <!-- Free Trial Row as Button -->
+      <div class="text-center mt-6">
+        <button class="inline-flex items-center justify-center w-full px-12 py-3 text-lg rounded-lg text-white bg-revhinBlue hover:bg-revhinDarkBlue hover:text-white transition-colors duration-300">
+          Try 15 Days Free
+        </button>
+      </div>
+    </div>
+    
+          </div>
+        </div>
+    </div>
+
+    <!--FAQ-->
+    <div class="w-full bg-white selection:bg-revhinDarkBlue selection:text-white">
+      <div class="py-24 px-8 max-w-5xl mx-auto flex flex-col sm:flex-row gap-12">
+        <div class="flex flex-col text-left basis-1/2">
+            <p class="font-poppins text-3xl text-center pb-20 sm:text-6xl font-bold text-revhinDarkBlue">Frequently Asked Questions</p>
+        </div>
+        <ul class="basis-1/2">
+            <li>
+              <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
+                  <span class="flex-1 text-base-content">Is my data secure?</span>
+                  <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                      <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+                      <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+                  </svg>
+              </button>
+              <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
+                  <div class="pb-5 leading-relaxed">
+                      <div class="space-y-2 leading-relaxed">Yes! We don't keep your data, we just process it, send it directly to your database and delete the temp files right after!</div>
+                  </div>
+              </div>
+          </li>
+
+            <li>
+                <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
+                    <span class="flex-1 text-base-content">How long does integration take?</span>
+                    <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+                        <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+                    </svg>
+                </button>
+                <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
+                    <div class="pb-5 leading-relaxed">
+                        <div class="space-y-2 leading-relaxed">Integration takes less than 5 minutes with our one-click HubSpot connection. No technical setup required.</div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
+                    <span class="flex-1 text-base-content">Can I export the insights?</span>
+                    <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+                        <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+                    </svg>
+                </button>
+                <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
+                    <div class="pb-5 leading-relaxed">
+                        <div class="space-y-2 leading-relaxed">Yes, all analyses can be exported to CSV, and charts to PNG.</div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
+                    <span class="flex-1 text-base-content">What support do you offer?</span>
+                    <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+                        <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+                    </svg>
+                </button>
+                <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
+                    <div class="pb-5 leading-relaxed">
+                        <div class="space-y-2 leading-relaxed">We provide email and WhatsApp support. Feel free to reach us!</div>
+                    </div>
+                </div>
+            </li>
+            
+        </ul>
+      </div>
+    </div>
+
+    <!--Footer-->
+    <div class="w-full text-center py-10 bg-revhinDarkBlue selection:bg-white selection:text-revhinDarkBlue">
+      <a href="#" class="font-kodchasan text-white font-black text-2xl">REVHIN</a>
+  
+      <div class="flex items-center justify-center gap-2 pt-2">
+          <span class="font-poppins text-lg text-white">Lets have a chat!</span>
+          <a href="https://wa.me/yourphonenumber" class="hover:scale-110 transition-transform">
+              <!-- WhatsApp icon in white -->
+              <svg class="w-5 h-5" fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+          </a>
+      </div>
+  
+      <span class="font-poppins block text-sm text-center text-white pt-2">Made with ☕ in Curitiba!</span>
+  </div>
+
+</body>
+</html>
