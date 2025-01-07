@@ -9,8 +9,13 @@
     <script>
       function toggleFAQ(button) {
           const content = button.nextElementSibling;
-          button.setAttribute("aria-expanded", button.getAttribute("aria-expanded") === "false" ? "true" : "false");
-          content.style.maxHeight = button.getAttribute("aria-expanded") === "true" ? content.scrollHeight + "px" : "0";
+          const isExpanded = button.getAttribute("aria-expanded") === "false";
+          button.setAttribute("aria-expanded", isExpanded ? "true" : "false");
+          content.style.maxHeight = isExpanded ? content.scrollHeight + "px" : "0";
+          
+          // Get the vertical rect and toggle its visibility
+          const verticalRect = button.querySelector('rect.vertical');
+          verticalRect.classList.toggle('hidden', isExpanded);
       }
   </script>
 </head>
@@ -33,13 +38,13 @@
                 
                 <!--Sign In Button-->
                 
-                <button class="ml-4 px-4 py-2 bg-white text-revhinBlue border border-revhinBlue rounded-md transition-colors hover:bg-revhinBlue hover:text-white">
-                  Sign In
+                <button class="ml-4 px-4 py-2 bg-white text-revhinBlue border border-revhinBlue rounded-md transition-colors hover:bg-revhinDarkBlue hover:text-white">
+                  Log In
                 </button>
                 
                 <!--Sign Up Button-->
                 <button class="ml-4 px-4 py-2 bg-revhinBlue border border-revhinBlue text-white rounded-md transition-colors">
-                  Sign Up
+                  Unlock Insights!
                 </button>
 
               </div>
@@ -47,17 +52,18 @@
           </header>
           
         <div class="bg-white dark:bg-gray-800 flex relative z-20 items-center overflow-hidden">
-            <div class="container mx-auto px-6 flex relative py-16">
+            <div class="container mx-auto px-6 flex relative py-4">
                 <div class="sm:w-2/3 lg:w-2/5 flex flex-col relative z-20 sm:py-20 sm:px-20">
-                    <h1 class="font-poppins text-4xl sm:text-6xl font-black flex flex-col leading-none dark:text-white text-black">
-                        Actionable Revenue Insights
+                    <h1 class="font-poppins text-4xl sm:text-6xl font-black flex flex-col dark:text-white text-black">
+                      <span class="highlight highlight-revhinDarkBlue highlight-variant-8 px-4 py-6 text-white">Managers,</span> <!--https://tailwindcss-highlights.hubatsch.dev/-->
+                      <span class="leading-tight"> why are sales insights still slowing you down?</span>
                     </h1>
                     <p class="pt-4 sm:text-xl sm:pt-8 font-poppins text-gray-800 dark:text-white">
-                        Stop wrestling with complex dashboards and waiting for analysts. Get automated sales performance insights that help you make better decisions, faster.
+                      Our platform delivers the sales insights you need—quickly and easily—so your team can focus on strategies that move the needle.
                     </p>
                 </div>
                 <div class="hidden sm:block sm:w-1/3 lg:w-3/5 relative">
-                    <img src="https://www.tailwind-kit.com/images/object/10.png" alt="" class="max-w-xs md:max-w-sm m-auto"/>
+                    <img src="./src/images/dashboard_mock.png" alt="" class="py-6 m-auto"/>
                 </div>
             </div>
         </div>
@@ -68,7 +74,7 @@
       <!--Statement-->
       <div class="flex items-center justify-center py-20 selection:text-revhinBlue">
         <h1 class="font-poppins text-revhinDarkBlue text-4xl px-8 sm:px-0 font-bold sm:text-5xl sm:w-3/5">
-          Unlock the full potential of your sales data with smart insights that guide your next move.
+          <span class="leading-tight">Unlock the full potential of your sales data with smart insights that guide your next move.</span>
         </h1>
       </div>
     
@@ -83,10 +89,10 @@
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-revhinDarkBlue">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
                 </svg>
-                <h3 class="font-poppins text-xl text-revhinDarkBlue font-semibold">Deep Insights</h3>
+                <h3 class="font-poppins text-xl text-revhinDarkBlue font-semibold">Real-Time Insights</h3>
               </div>
-              <p class="font-poppins text-revhinDarkBlue text-base">
-                Leverage automated analysis to reveal trends and insights hidden in your sales data—turning complexity into clarity.
+              <p class="font-poppins text-revhinDarkBlue text-base leading-7">
+                Track conversions, lead times, and trends instantly with automated cohort reports—delivering answers without analyst delays.
               </p>
             </div>
           </div>
@@ -98,10 +104,10 @@
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
                 </svg>
-                <h3 class="font-poppins text-xl text-white font-semibold">Actionable Metrics</h3>
+                <h3 class="font-poppins text-xl text-white font-semibold">Cohort Tracking</h3>
               </div>
-              <p class="font-poppins text-white text-base">
-                Track KPIs like conversions and lead times across specific periods, empowering you with reliable data to refine strategies.
+              <p class="font-poppins text-white text-base leading-7">
+                Group and compare sales performance by region, rep, or time frame to find trends that drive growth.
               </p>
             </div>
           </div>
@@ -113,10 +119,10 @@
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-revhinDarkBlue">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
                 </svg>
-                <h3 class="font-poppins text-xl text-revhinDarkBlue font-semibold">Revenue Growth</h3>
+                <h3 class="font-poppins text-xl text-revhinDarkBlue font-semibold">Forecast with Confidence</h3>
               </div>
-              <p class="font-poppins text-revhinDarkBlue text-base">
-                Track performance with precision, spot growth opportunities, and scale revenue effortlessly using actionable sales metrics.
+              <p class="font-poppins text-revhinDarkBlue text-base leading-7">
+                Spot risks and opportunities early with AI-powered pipeline scoring and proactive alerts, helping you create forecasts you can trust.
               </p>
             </div>
           </div>
@@ -128,10 +134,10 @@
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
                 </svg>
-                <h3 class="font-poppins text-xl text-white font-semibold">Smarter Training</h3>
+                <h3 class="font-poppins text-xl text-white font-semibold">Performance Coaching</h3>
               </div>
-              <p class="font-poppins text-white text-base">
-                Analyze historical performance trends without upgrading to expensive CRM plans—perfect for focused, high-impact training sessions.
+              <p class="font-poppins text-white text-base leading-7">
+                Analyze historical trends and identify performance gaps using dynamic heatmaps and alerts—perfect for coaching and scaling high-impact strategies.
               </p>
             </div>
           </div>
@@ -143,10 +149,10 @@
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-revhinDarkBlue">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
                 </svg>
-                <h3 class="font-poppins text-xl text-revhinDarkBlue font-semibold">Streamlined Audits</h3>
+                <h3 class="font-poppins text-xl text-revhinDarkBlue font-semibold">Clear Signals, Not Just Data</h3>
               </div>
-              <p class="font-poppins text-revhinDarkBlue text-base">
-                Monitor deal changes with ease using a streamlined interface, making audits faster and less stressful.
+              <p class="font-poppins text-revhinDarkBlue text-base leading-7">
+                Highlight what’s working—and what’s not—with actionable insights that point directly to next steps.
               </p>
             </div>
           </div>
@@ -229,84 +235,137 @@
     <!--Ready to Transofrm Your Sales Analytics?-->
 
     <div class="w-full py-20 bg-gray-50 selection:bg-revhinDarkBlue selection:text-white">
-        <div class="max-w-5xl mx-auto font-poppins">
-          <!-- Section Header -->
-          <h2 class="font-poppins text-3xl text-center pb-20 sm:text-6xl font-bold text-revhinDarkBlue">
-            Ready to transform your sales analytics?
-          </h2>
-        
-          <!-- Pricing Section -->
-          <div class="grid grid-cols-1 sm:grid-cols-6 gap-8 px-4 sm:px-0">
-            <!-- Plan 1 -->
-            <div class="col-span-4 sm:col-span-2 flex flex-col p-6 bg-white border border-gray-200 rounded-xl shadow">
-              <h3 class="text-base mb-4">Give it a Try!</h3>
-              <p class="text-2xl mb-4">Free<span class="text-sm"> /mo</span></p>
-              <p class="mb-4 text-sm">Per company</p>
-              <hr class="border-dashed border-gray-400 mb-4">
-              <ul class="space-y-2 mb-6">
-                <li class="flex gap-2 text-sm">
-                  Up to 100 companies
-                </li>
-                <li class="flex gap-2 text-sm">
-                  Limited Insights
-                </li>
-                <li class="flex gap-2 text-sm">
-                  Export to CSV
-                </li>
-              </ul>
-              <button class="mt-auto inline-flex items-center justify-center px-12 py-3 text-base font-medium rounded-lg text-revhinDarkBlue bg-gray-100 hover:bg-revhinBlue hover:text-white transition-colors duration-300">
-                Get Started
-              </button>
+      <div class="max-w-5xl mx-auto font-poppins">
+        <!-- Section Header -->
+        <h2 class="font-poppins text-3xl text-center pb-20 sm:text-6xl font-bold text-revhinDarkBlue">
+          Ready to transform your sales analytics?
+        </h2>
+      
+        <!-- Pricing Section -->
+        <div class="grid grid-cols-1 sm:grid-cols-6 gap-8 px-4 sm:px-0">
+          <!-- Plan 1 -->            
+          <div class="col-span-4 sm:col-span-2 flex flex-col bg-white shadow-lg rounded-lg p-8 w-80">
+            <h2 class="text-xl font-semibold pb-4">Give it a Try!</h2>
+            <!--<p class="text-sm text-gray-500 mb-4">Give it a Try!</p>-->
+            <div class="flex items-baseline mb-11">
+              <span class="text-3xl font-bold">$0</span>
+              <span class="text-gray-500">/ Month</span>
             </div>
-        
-            <!-- Plan 2 -->
-
-    <div class="col-span-4 flex flex-col p-6 bg-revhinDarkBlue text-white shadow-md hover:shadow-xl rounded-md transition duration-200 ease-in-out">
-      <div class="grid grid-cols-5 gap-6">
-        <!-- Column 1 -->
-        <div class="col-span-2 flex flex-col justify-center items-center">
-          <h3 class="text-2xl font-bold mb-4 text-center">Insight Machine</h3>
-          <p class="text-5xl font-bold mb-4 text-center">$8.34 <span class="text-lg">/mo</span></p>
-          <p class="mb-4 text-lg text-center">Per company</p>
-        </div>
-    
-        <!-- Column 2 -->
-        <ul class="space-y-2 col-span-3">
-          <li class="flex items-center gap-2 font-bold">
-            Everything you need to fulfill your insights needs:
-          </li>
-          <li class="flex items-center gap-2 pl-6">
-            Unlimited companies
-          </li>
-          <li class="flex items-center gap-2 pl-6">
-            AI Insights
-          </li>
-          <li class="flex items-center gap-2 pl-6">
-            Hourly insights
-          </li>
-          <li class="flex items-center gap-2 pl-6">
-            XXXXX
-          </li>
-          <li class="flex items-center gap-2 pl-6">
-            YYYYY
-          </li>
-          <li class="flex items-center gap-2 pl-6">
-            ZZZZZ
-          </li>
-        </ul>
-      </div>
-    
-      <!-- Free Trial Row as Button -->
-      <div class="text-center mt-6">
-        <button class="inline-flex items-center justify-center w-full px-12 py-3 text-lg rounded-lg text-revhinDarkBlue bg-gray-50 hover:bg-revhinBlue hover:text-white transition-colors duration-300">
-          Try 15 Days Free
-        </button>
-      </div>
-    </div>
-    
+            <ul class="space-y-4 mb-6 text-sm text-gray-600">
+              <li class="flex items-center"><span class="mr-2">✔</span> Up to 100 deals</li>
+              <li class="flex items-center"><span class="mr-2">✔</span> Limited insights</li>
+              <li class="flex items-center"><span class="mr-2">✔</span> Export to CSV</li>
+            </ul>
+            <button class="mt-auto inline-flex items-center justify-center px-12 py-3 text-base font-medium rounded-lg text-revhinDarkBlue bg-gray-100 hover:bg-revhinBlue hover:text-white transition-colors duration-300">Give it a Try!</button>
           </div>
+      
+          <!-- Plan 2 -->
+
+          <div class="col-span-2 sm:col-span-4 flex flex-col bg-white shadow-lg rounded-lg p-8 w-80">
+            <h2 class="text-xl font-semibold pb-4">Insight Machine</h2>
+            <!--<p class="text-sm text-gray-500 mb-4">Give it a Try!</p>-->
+            <div class="flex items-baseline">
+              <span class="text-3xl font-bold">$8.34</span>
+              <span class="text-gray-500">/ Month</span>
+            </div>
+            <p class="text-sm text-gray-500 mb-6">Per Company</p>
+            <ul class="space-y-4 mb-6 text-sm text-gray-600">
+              <li class="flex items-center"><span class="mr-2">✔</span> Unlimited deals</li>
+              <li class="flex items-center"><span class="mr-2">✔</span> Pro insights</li>
+              <li class="flex items-center"><span class="mr-2">✔</span> Hourly Update</li>
+              <li class="flex items-center"><span class="mr-2">✔</span> Export directly to your database</li>
+              <li class="flex items-center"><span class="mr-2">✔</span> Slack Reports</li>
+              <li class="flex items-center"><span class="mr-2">✔</span> XXXXX</li>
+            </ul>
+            <button class="mt-auto inline-flex items-center justify-center px-12 py-3 text-base font-medium rounded-lg text-revhinDarkBlue bg-gray-100 hover:bg-revhinBlue hover:text-white transition-colors duration-300">Unlock Insights</button>
+          </div>
+  
         </div>
+      </div>
+  </div>
+
+
+    <!--OLD-->
+    <div class="w-full py-20 bg-gray-50 selection:bg-revhinDarkBlue selection:text-white">
+      <div class="max-w-5xl mx-auto font-poppins">
+        <!-- Section Header -->
+        <h2 class="font-poppins text-3xl text-center pb-20 sm:text-6xl font-bold text-revhinDarkBlue">
+          Ready to transform your sales analytics?
+        </h2>
+      
+        <!-- Pricing Section -->
+        <div class="grid grid-cols-1 sm:grid-cols-6 gap-8 px-4 sm:px-0">
+          <!-- Plan 1 -->            
+          <div class="col-span-4 sm:col-span-2 flex flex-col p-6 bg-white border border-gray-200 rounded-xl shadow">
+            <h3 class="text-base mb-4">Give it a Try!</h3>
+            <p class="text-2xl mb-4">Free<span class="text-sm"> /mo</span></p>
+            <p class="mb-4 text-sm">Per company</p>
+            <hr class="border-dashed border-gray-400 mb-4">
+            <ul class="space-y-2 mb-6">
+              <li class="flex gap-2 text-sm">
+                Up to 100 companies
+              </li>
+              <li class="flex gap-2 text-sm">
+                Limited Insights
+              </li>
+              <li class="flex gap-2 text-sm">
+                Export to CSV
+              </li>
+            </ul>
+            <button class="mt-auto inline-flex items-center justify-center px-12 py-3 text-base font-medium rounded-lg text-revhinDarkBlue bg-gray-100 hover:bg-revhinBlue hover:text-white transition-colors duration-300">
+              Get Started
+            </button>
+          </div>
+      
+          <!-- Plan 2 -->
+
+  <div class="col-span-4 flex flex-col p-6 bg-revhinDarkBlue text-white shadow-md hover:shadow-xl rounded-md transition duration-200 ease-in-out">
+    <div class="grid grid-cols-5 gap-6">
+
+      <!-- Column 1 -->
+      <div class="col-span-2 flex flex-col justify-center items-center">
+        <h3 class="text-2xl font-bold mb-4 text-center">Insight Machine</h3>
+        <p class="text-5xl font-bold mb-4 text-center">$8.34 <span class="text-lg">/mo</span></p>
+        <p class="mb-4 text-lg text-center">Per company</p>
+      </div>
+  
+      <!-- Column 2 -->
+      <ul class="space-y-2 col-span-3">
+        <li class="flex items-center gap-2 font-bold">
+          Everything you need to fulfill your insights needs:
+        </li>
+        <li class="flex items-center gap-2 pl-6">
+          Unlimited companies
+        </li>
+        <li class="flex items-center gap-2 pl-6">
+          AI Insights
+        </li>
+        <li class="flex items-center gap-2 pl-6">
+          Hourly insights
+        </li>
+        <li class="flex items-center gap-2 pl-6">
+          XXXXX
+        </li>
+        <li class="flex items-center gap-2 pl-6">
+          YYYYY
+        </li>
+        <li class="flex items-center gap-2 pl-6">
+          ZZZZZ
+        </li>
+      </ul>
     </div>
+  
+    <!-- Free Trial Row as Button -->
+    <div class="text-center mt-6">
+      <button class="inline-flex items-center justify-center w-full px-12 py-3 text-lg rounded-lg text-revhinDarkBlue bg-gray-50 hover:bg-revhinBlue hover:text-white transition-colors duration-300">
+        Try 15 Days Free
+      </button>
+    </div>
+  </div>
+  
+        </div>
+      </div>
+  </div>
 
     <!--FAQ-->
     <div class="w-full bg-white selection:bg-revhinDarkBlue selection:text-white">
@@ -315,12 +374,13 @@
             <p class="font-poppins text-3xl text-center pb-20 sm:text-6xl font-bold text-revhinDarkBlue">Frequently Asked Questions</p>
         </div>
         <ul class="basis-1/2">
+
             <li>
               <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
                   <span class="flex-1 text-base-content">Is my data secure?</span>
                   <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                      <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
-                      <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+                      <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out"></rect>
+                      <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out vertical"></rect>
                   </svg>
               </button>
               <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
@@ -334,13 +394,13 @@
                 <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
                     <span class="flex-1 text-base-content">How long does integration take?</span>
                     <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                        <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
-                        <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+                        <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out"></rect>
+                        <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out vertical"></rect>
                     </svg>
                 </button>
                 <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
                     <div class="pb-5 leading-relaxed">
-                        <div class="space-y-2 leading-relaxed">Integration takes less than 5 minutes with our one-click HubSpot connection. No technical setup required.</div>
+                        <div class="space-y-2 leading-relaxed">Integration takes less than 5 minutes with our one-click HubSpot connection. No coding and no technical setup required.</div>
                     </div>
                 </div>
             </li>
@@ -349,8 +409,8 @@
                 <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
                     <span class="flex-1 text-base-content">Can I export the insights?</span>
                     <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                        <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
-                        <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+                        <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out"></rect>
+                        <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out vertical"></rect>
                     </svg>
                 </button>
                 <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
@@ -364,13 +424,13 @@
                 <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
                     <span class="flex-1 text-base-content">What support do you offer?</span>
                     <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                        <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
-                        <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+                        <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out "></rect>
+                        <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out vertical"></rect>
                     </svg>
                 </button>
                 <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
                     <div class="pb-5 leading-relaxed">
-                        <div class="space-y-2 leading-relaxed">We provide email and WhatsApp support. Feel free to reach us!</div>
+                        <div class="space-y-2 leading-relaxed">We provide support through different channels such as e-mail and Whatsapp support. Feel free to reach us!</div>
                     </div>
                 </div>
             </li>

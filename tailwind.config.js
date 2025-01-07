@@ -20,6 +20,8 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-highlights'), /**<!--https://tailwindcss-highlights.hubatsch.dev/--> */
+  ],
 }
 
