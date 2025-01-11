@@ -24,162 +24,130 @@
   <!--Contains the top menu and the hero section-->
     <main class="relative overflow-hidden selection:text-revhinBlue">
 
-      <!--Top menu-->
-        <header class="h-24 md:h-32 flex items-center z-30 w-full">
-            <div class="container mx-auto px-6 py-6 flex items-center justify-between rounded-2xl shadow-md">
-              <!--Logo Section-->
-              <div class="font-kodchasan text-black font-black text-2xl">
-                REVHIN
-              </div>
-
-              <!--Top menu, left side section-->
-              <div class="flex items-center">
-                <div class="relative inline-block text-left z-50">
-                
-                <!--Sign In Button-->
-                
-                <button class="ml-4 px-4 py-2 bg-white text-revhinBlue border border-revhinBlue rounded-md transition-colors hover:bg-revhinBlue hover:text-white">
-                  Log In
-                </button>
-                
-                <!--Sign Up Button-->
-                <button class="ml-4 px-4 py-2 bg-revhinBlue border border-revhinBlue text-white rounded-md transition-colors">
-                  Unlock Insights!
-                </button>
-
-              </div>
+    <!--Top menu-->
+      <header class="h-24 flex items-center z-30 w-full">
+          <div class="container mx-auto px-6 flex items-center justify-between">
+            <!--Logo Section-->
+            <div class="font-kodchasan text-black font-black text-2xl">
+              REVHIN
             </div>
-          </header>
-          
-        <div class="bg-white flex relative z-20 items-center overflow-hidden">
-            <div class="container mx-auto px-6 flex relative py-4">
-                <div class="md:w-2/3 lg:w-2/5 flex flex-col relative z-20 md:py-20 md:px-20">
-                    <h1 class="font-poppins text-4xl md:text-6xl font-black flex flex-col text-black">
-                      <span class="highlight highlight-revhinBlue highlight-variant-8 px-4 py-6 text-white selection:text-revhinDarkBlue">Managers,</span> <!--https://tailwindcss-highlights.hubatsch.dev/-->
-                      <span class="leading-tight"> why are sales insights still slowing you down?</span>
-                    </h1>
-                    <p class="pt-4 md:text-xl md:pt-8 font-poppins text-gray-800">
-                      Our platform delivers the sales insights you need—quickly and easily—so your team can focus on strategies that move the needle.
-                    </p>
-                </div>
-                <div class="hidden md:block md:w-1/3 lg:w-3/5 relative">
-                    <img src="./src/images/dashboard_mock.png" alt="" class="py-6 m-auto"/>
-                </div>
+
+            <!--Top menu, left side section-->
+            <div class="flex items-center">
+              <div class="relative inline-block text-left z-50">
+              
+              <!--Sign In Button-->
+              
+              <button class="ml-3 px-3 py-2 text-sm bg-white text-black font-medium border border-revhinBlue rounded-md transition-colors hover:bg-revhinSecond hover:text-white">
+                Log In
+              </button>
+              
+              <!--Sign Up Button-->
+              <button class="ml-3 px-3 py-2 text-sm bg-revhinFirst border border-revhinFirst font-medium text-white rounded-md transition-colors hover:bg-revhinThird hover:border-revhinThird">
+                Unlock Insights!
+              </button>
+
             </div>
-        </div>
+          </div>
+        </header>
+
+        <!--Hero Section-->
+          <div class="container mx-auto px-6 py-4 grid grid-cols-1 xl:grid-cols-5">
+            <!-- Text -->
+              <div class="flex flex-col relative z-20 xl:col-span-2 xl:p-20">
+                <h1 class="font-poppins text-4xl sm:text-6xl font-black flex flex-col text-black">
+                    <span class="leading-normal">Why are sales insights still slowing you down?</span>
+                </h1>
+                <p class="pt-4 sm:text-xl sm:pt-8 font-poppins text-gray-800">
+                    <span class="leading-normal">Our platform delivers the sales insights you need—quickly and easily—so your team can focus on strategies that move the needle.</span>
+                </p>
+            </div>
+          <!-- Image -->
+            <div class="relative xl:col-span-3">
+                <img src="./src/images/dashboard_mock.png" alt="" class="m-auto"/>
+            </div>
+          </div>
+
     </main>
 
     <!--Features-->
-    <div class="w-full pb-20 bg-gray-50 selection:text-revhinBlue">
+
+    <div class="w-full">
       <!--Statement-->
-      <div class="flex items-center justify-center py-20 selection:text-revhinBlue">
-        <h1 class="font-poppins text-revhinDarkBlue text-4xl px-8 md:px-0 font-bold md:text-5xl md:w-3/5">
-          <span class="leading-tight">Unlock the full potential of your sales data with smart insights that guide your next move.</span>
-        </h1>
-      </div>
-    
+        <div class="container mx-auto px-6 pb-6 lg:py-12 hidden lg:block">
+          <span class="font-poppins text-5xl font-bold leading-normal text-black">Unlock the full potential of your sales data with smart insights that guide your next move.</span>
+        </div>
+
       <!--Features Grid-->
-      <div class="flex items-center justify-center px-4 md:px-6">
-        <div class="container grid grid-cols-1 md:grid-cols-4 gap-4">
-          
-          <!--Card 1-->
-          <div class="col-span-1 md:col-span-2">
-            <div class="flex flex-col py-4 px-4 md:px-6 min-h-72 h-full hover:shadow-lg rounded-xl transition duration-500 ease-in-out bg-white shadow-md">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-6">
+
+          <!--Feature #1-->
+          <div class="col-span-1 lg:col-span-2">
+            <div class="flex flex-col min-h-40 h-full px-8">
               <div class="flex items-center gap-2 mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-revhinDarkBlue">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
                 </svg>
-                <h3 class="font-poppins text-xl text-revhinDarkBlue font-semibold">Real-Time Insights</h3>
+                <h3 class="font-poppins text-xl text-revhinFirst font-semibold">Real-Time Insights</h3>
               </div>
-              <p class="font-poppins text-revhinDarkBlue text-base leading-7 selection:text-white selection:bg-revhinDarkBlue">
-                Track conversions, lead times, and trends instantly with automated cohort reports—delivering answers without analyst delays.
+              <p class="font-poppins text-revhinSecond text-base leading-7">
+                Track conversions, lead times, cohorts and trends instantly with automated reports—delivering answers without analyst delays.
               </p>
             </div>
           </div>
-    
-          <!--Card 2-->
-          <div class="col-span-1">
-            <div class="flex flex-col py-4 px-4 md:px-6 min-h-72 h-full hover:shadow-lg rounded-xl transition duration-500 ease-in-out bg-revhinDarkBlue shadow-md">
-              <div class="flex items-center gap-2 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
-                </svg>
-                <h3 class="font-poppins text-xl text-white font-semibold">Cohort Tracking</h3>
-              </div>
-              <p class="font-poppins text-white text-base leading-7 selection:text-white selection:bg-revhinDarkBlue">
-                Group and compare sales performance by region, rep, or time frame to find trends that drive growth.
-              </p>
-            </div>
-          </div>
-    
-          <!--Card 3 (Tall Card)-->
-          <div class="col-span-1 row-span-2">
-            <div class="flex flex-col py-4 px-4 md:px-6 min-h-72 h-full hover:shadow-lg rounded-xl transition duration-500 ease-in-out bg-white shadow-md">
+
+          <!--Feature #3-->
+          <div class="col-span-1 lg:col-span-2">
+            <div class="flex flex-col min-h-40 h-full px-8">
               <div class="flex items-center gap-2 mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-revhinDarkBlue">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
                 </svg>
-                <h3 class="font-poppins text-xl text-revhinDarkBlue font-semibold">Forecast with Confidence</h3>
+                <h3 class="font-poppins text-xl text-revhinFirst font-semibold">Superb Forecast</h3>
               </div>
-              <p class="font-poppins text-revhinDarkBlue text-base leading-7 selection:text-white selection:bg-revhinDarkBlue">
+              <p class="font-poppins text-revhinSecond text-base leading-7">
                 Spot risks and opportunities early with AI-powered pipeline scoring and proactive alerts, helping you create forecasts you can trust.
               </p>
             </div>
           </div>
-    
-          <!--Card 4-->
-          <div class="col-span-1">
-            <div class="flex flex-col py-4 px-4 md:px-6 min-h-72 h-full hover:shadow-lg rounded-xl transition duration-500 ease-in-out bg-revhinBlue shadow-md">
-              <div class="flex items-center gap-2 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
-                </svg>
-                <h3 class="font-poppins text-xl text-white font-semibold">Performance Coaching</h3>
-              </div>
-              <p class="font-poppins text-white text-base leading-7 selection:text-white selection:bg-revhinDarkBlue">
-                Analyze historical trends and identify performance gaps using dynamic heatmaps and alerts—perfect for coaching and scaling high-impact strategies.
-              </p>
-            </div>
-          </div>
-    
-          <!--Card 5-->
-          <div class="col-span-1 md:col-span-2">
-            <div class="flex flex-col py-4 px-4 md:px-6 min-h-72 h-full hover:shadow-lg rounded-xl transition duration-500 ease-in-out bg-white shadow-md">
+
+          <!--Feature #4-->
+          <div class="col-span-1 lg:col-span-2">
+            <div class="flex flex-col min-h-40 h-full px-8">
               <div class="flex items-center gap-2 mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-revhinDarkBlue">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
                 </svg>
-                <h3 class="font-poppins text-xl text-revhinDarkBlue font-semibold">Clear Signals, Not Just Data</h3>
+                <h3 class="font-poppins text-xl text-revhinFirst font-semibold">Performance Coach</h3>
               </div>
-              <p class="font-poppins text-revhinDarkBlue text-base leading-7 selection:text-white selection:bg-revhinDarkBlue">
-                Highlight what’s working—and what’s not—with actionable insights that point directly to next steps.
+              <p class="font-poppins text-revhinSecond text-base leading-7">
+                Analyze historical trends and identify performance gaps using dynamic heatmaps and alerts—perfect for coaching and scaling high-impact strategies.
               </p>
             </div>
           </div>
-    
+
         </div>
-      </div>
     </div>
 
     <!--EASY AS COUNT 1,2,3-->
 
-    <div class="w-full py-20 bg-white selection:bg-revhinDarkBlue selection:text-white">
-      <div class="container mx-auto px-4 md:px-6 py-8">
-        <div class="px-4 md:px-6 py-12">
+    <div class="w-full">
+      <div class="container mx-auto px-4">
+        <div class="py-12">
           <!-- Two Column Layout -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div class="flex items-center">
               <div class="space-y-8">
                 <div class="space-y-6">
-                  <h2 class="font-poppins text-4xl px-4 md:px-6 md:text-5xl font-bold text-revhinDarkBlue">
+                  <h2 class="font-poppins text-4xl px-4 lg:px-6 lg:text-5xl font-bold text-revhinDarkBlue">
                     Quick Setup, Fast Results
                   </h2>
-                  <p class="text-xl px-4 md:px-6 text-revhinDarkBlue">
+                  <p class="text-xl px-4 lg:px-6 text-revhinDarkBlue">
                     <span> Our platform is designed for busy professionals.<br></span>
                     <span> Set up in minutes and start getting revenue insights!</span>
                   </p>
-                  <div class="pt-4 flex justify-start px-4 md:px-6">
-                    <a href="#" class="inline-flex items-center justify-center px-12 py-3 text-base font-medium rounded-lg text-white bg-revhinBlue hover:bg-revhinDarkBlue transition duration-150">
+                  <div class="pt-4 flex justify-start px-4 lg:px-6">
+                    <a href="#" class="inline-flex items-center justify-center px-12 py-3 text-base font-medium rounded-lg text-white bg-revhinFirst hover:bg-revhinSecond transition duration-150">
                       Get Started →
                     </a>
                   </div>
@@ -235,17 +203,17 @@
 
     <!--Ready to Transofrm Your Sales Analytics?-->
 
-    <div class="w-full py-20 bg-gray-50 selection:bg-revhinDarkBlue selection:text-white">
+    <div class="w-full py-20 selection:bg-revhinDarkBlue selection:text-white">
       <div class="max-w-5xl mx-auto font-poppins">
         <!-- Section Header -->
-        <h2 class="font-poppins text-3xl text-center pb-20 md:text-6xl font-bold text-revhinDarkBlue">
+        <h2 class="font-poppins text-3xl text-center pb-20 lg:text-6xl font-bold text-revhinDarkBlue">
           Ready to transform your sales analytics?
         </h2>
       
         <!-- Pricing Section -->
-        <div class="grid grid-cols-1 md:grid-cols-6 gap-8 px-4 md:px-0">
+        <div class="grid grid-cols-1 lg:grid-cols-6 gap-8 px-4 lg:px-0">
           <!-- Plan 1 -->            
-          <div class="col-span-4 md:col-span-2 flex flex-col bg-white shadow-lg rounded-lg p-8">
+          <div class="col-span-4 lg:col-span-2 flex flex-col bg-white shadow-lg rounded-lg p-8">
             <h2 class="text-xl font-semibold">Give it a Try!</h2>
             <p class="text-sm text-gray-500 mt-1 mb-4">Feel the taste of a insightful life!</p>
             <div class="flex items-baseline mb-11">
@@ -257,12 +225,12 @@
               <li class="flex items-center"><span class="mr-2">✔</span> Limited insights</li>
               <li class="flex items-center"><span class="mr-2">✔</span> Export to CSV</li>
             </ul>
-            <button class="mt-auto inline-flex items-center justify-center px-12 py-3 text-base font-medium rounded-lg text-revhinDarkBlue bg-gray-100 hover:bg-revhinDarkBlue hover:text-white transition-colors duration-300">Give it a Try!</button>
+            <button class="mt-auto inline-flex items-center justify-center px-12 py-3 text-base font-medium rounded-lg text-revhinDarkBlue bg-gray-100 hover:bg-revhinSecond hover:text-white transition-colors duration-300">Give it a Try!</button>
           </div>
       
           <!-- Plan 2 -->
 
-          <div class="col-span-4 md:col-span-4 flex flex-col bg-white shadow-lg rounded-lg p-8">
+          <div class="col-span-4 sm:col-span-4 flex flex-col bg-white shadow-lg rounded-lg p-8">
             <h2 class="text-xl font-semibold">Insight Machine</h2>
             <p class="text-sm text-gray-500 mt-1 mb-4">Unlock useful insights!</p>
             <div class="flex items-baseline">
@@ -270,7 +238,7 @@
               <span class="text-gray-500">/ Month</span>
             </div>
             <p class="text-sm text-gray-500 mb-6">Per Company</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 text-sm text-gray-600">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6 text-sm text-gray-600">
               <!-- Column 1 -->
               <ul class="space-y-4">
                 <li class="flex items-center"><span class="mr-2">✔</span> Unlimited deals</li>
@@ -284,7 +252,7 @@
                 <li class="flex items-center"><span class="mr-2">✔</span> XXXXX</li>
               </ul>
             </div>
-            <button class="mt-auto inline-flex items-center justify-center px-12 py-3 text-base font-medium rounded-lg text-white bg-revhinBlue hover:bg-revhinDarkBlue transition-colors duration-300">Unlock Insights</button>
+            <button class="mt-auto inline-flex items-center justify-center px-12 py-3 text-base font-medium rounded-lg text-white bg-revhinFirst hover:bg-revhinSecond transition-colors duration-300">Unlock Insights</button>
           </div>
   
         </div>
@@ -292,15 +260,15 @@
   </div>
 
     <!--FAQ-->
-    <div class="w-full bg-white selection:text-revhinBlue">
-      <div class="py-24 px-8 max-w-5xl mx-auto flex flex-col md:flex-row gap-12">
+    <div class="w-full bg-white selection:text-revhinFirst">
+      <div class="py-24 px-8 max-w-5xl mx-auto flex flex-col lg:flex-row gap-12">
         <div class="flex flex-col text-left basis-1/2">
-            <p class="font-poppins text-3xl text-center pb-20 md:text-6xl font-bold text-revhinDarkBlue">Frequently Asked Questions</p>
+            <p class="font-poppins text-6xl text-center pb-20 font-bold text-revhinFirst">Frequently Asked Questions</p>
         </div>
-        <ul class="basis-1/2 selection:text-white selection:bg-revhinDarkBlue">
+        <ul class="basis-1/2 selection:text-white selection:bg-revhinSecond">
 
             <li>
-              <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
+              <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t lg:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
                   <span class="flex-1 text-base-content">Is my data secure?</span>
                   <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                       <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out"></rect>
@@ -315,7 +283,7 @@
           </li>
 
             <li>
-                <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
+                <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t lg:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
                     <span class="flex-1 text-base-content">How long does integration take?</span>
                     <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                         <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out"></rect>
@@ -330,7 +298,7 @@
             </li>
 
             <li>
-                <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
+                <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t lg:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
                     <span class="flex-1 text-base-content">Can I export the insights?</span>
                     <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                         <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out"></rect>
@@ -345,7 +313,7 @@
             </li>
 
             <li>
-                <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
+                <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t lg:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
                     <span class="flex-1 text-base-content">What support do you offer?</span>
                     <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                         <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out "></rect>
@@ -364,7 +332,7 @@
     </div>
 
     <!--Footer-->
-    <div class="w-full text-center py-10 bg-revhinDarkBlue selection:bg-white selection:text-revhinDarkBlue">
+    <div class="w-full text-center py-10 bg-revhinFirst selection:bg-white selection:text-revhinFourth">
       <a href="#" class="font-kodchasan text-white font-black text-2xl">REVHIN</a>
   
       <div class="flex items-center justify-center gap-2 pt-2">

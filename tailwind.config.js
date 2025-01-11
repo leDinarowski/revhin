@@ -7,12 +7,10 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        revhinGreen: '#6A8E7F',
-        revhinBlack: '#191716',
-        revhinRed: '#9F2042',
-        revhinWhite: '#F8E5EE',
-        revhinBlue: '#072ac8',
-        revhinDarkBlue: '#1e293b'
+        revhinFirst: '#000000',
+        revhinSecond: '#333333',
+        revhinThird: '#999999',
+        revhinFourth: '#FFFFFF'
       },
       fontFamily: {
         kodchasan: ['Kodchasan', 'sans-serif'],
