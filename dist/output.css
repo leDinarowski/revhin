@@ -1266,6 +1266,24 @@ video {
   }
 }
 
+@media (min-width: 768px) {
+  @keyframes slidein {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .md\:animate-slidein {
+    animation: slidein 1s ease 700ms;
+  }
+}
+
 @media (min-width: 1024px) {
   .lg\:col-span-2 {
     grid-column: span 2 / span 2;
@@ -1312,26 +1330,9 @@ video {
 }
 
 @media (min-width: 1536px) {
-  .\32xl\:col-span-3 {
-    grid-column: span 3 / span 3;
-  }
-
-  .\32xl\:col-span-5 {
-    grid-column: span 5 / span 5;
-  }
-
-  .\32xl\:grid-cols-8 {
-    grid-template-columns: repeat(8, minmax(0, 1fr));
-  }
-
   .\32xl\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
-  }
-
-  .\32xl\:py-16 {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
   }
 
   .\32xl\:py-20 {
@@ -1342,14 +1343,6 @@ video {
   .\32xl\:py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;
-  }
-
-  .\32xl\:pt-10 {
-    padding-top: 2.5rem;
-  }
-
-  .\32xl\:text-left {
-    text-align: left;
   }
 
   .\32xl\:text-6xl {
