@@ -16,7 +16,7 @@ module.exports = {
       fontFamily: {
         kodchasan: ['Kodchasan', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif']
-      }
+      },
     },
   },
   plugins: [
