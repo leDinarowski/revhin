@@ -17,6 +17,13 @@ module.exports = {
         kodchasan: ['Kodchasan', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif']
       },
+      backgroundSize: {
+        'size-200': '200% 200%',
+      },
+      backgroundPosition: {
+        'pos-0': '0% 0%',
+        'pos-100': '100% 100%',
+      },
       keyframes: {
         slidein: {
           from: {
@@ -35,7 +42,7 @@ module.exports = {
     },
   },
   plugins: [
-    require('tailwindcss-highlights'), /**<!--https://tailwindcss-highlights.hubatsch.dev/--> */
+    
   ],
 }
 
